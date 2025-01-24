@@ -1,8 +1,5 @@
-# Virtual environment
-.venv/
-env/
-venv/
-
+# database file
+*.db
 
 # macOS system files
 .DS_Store

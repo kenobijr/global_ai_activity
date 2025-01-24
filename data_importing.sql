@@ -1,10 +1,10 @@
 -- 1. Read in all relevant .csv files as temp tables from https://eto.tech/dataset-docs/country-ai-activity-metrics/
 
-.import --csv ./cat/patents_yearly_applications.csv temp_patents_applications
-.import --csv ./cat/patents_yearly_granted.csv temp_patents_granted
-.import --csv ./cat/publications_yearly_articles.csv temp_publications_articles
-.import --csv ./cat/companies_yearly_disclosed.csv temp_companies_disclosed
-.import --csv ./cat/companies_yearly_estimated.csv temp_companies_estimated
+.import --csv ./data/patents_yearly_applications.csv temp_patents_applications
+.import --csv ./data/patents_yearly_granted.csv temp_patents_granted
+.import --csv ./data/publications_yearly_articles.csv temp_publications_articles
+.import --csv ./data/companies_yearly_disclosed.csv temp_companies_disclosed
+.import --csv ./data/companies_yearly_estimated.csv temp_companies_estimated
 
 -- 2. Insert countries & research_fields into new tables from the temp tables (with unique values only)
 
