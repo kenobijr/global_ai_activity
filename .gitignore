@@ -1,13 +1,11 @@
 # database file
 *.db
 
+# pycharm config file
+.idea
+
 # macOS system files
 .DS_Store
-
-# Python cache files
-__pycache__/
-*.py[cod]
-.pytest_cache/
 
 # Logs
 *.log
@@ -15,3 +13,5 @@ __pycache__/
 # Other unnecessary files
 *.swp
 
+# raw er diagram text for external service
+er_raw.txt

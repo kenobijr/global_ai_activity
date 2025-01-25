@@ -16,9 +16,9 @@ if [ -f "$DB_NAME" ]; then
 fi
 
 # create database and apply schema
-sqlite3 $DB_NAME < schema.sql
+sqlite3 $DB_NAME < init_db/schema.sql
 
 # populate db
-sqlite3 $DB_NAME < data_importing.sql
+sqlite3 $DB_NAME < init_db/data_importing.sql
 
 echo "Database setup complete: $DB_NAME" 
