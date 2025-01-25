@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total patents granted in year
+-- TOP 20 GLOBAL leaders of total patents granted in 2023
 SELECT
 countries.name AS "Country",
 printf('%,d', patents_yearly_granted.amount_grants) AS "Total AI patents granted"

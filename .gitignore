@@ -14,4 +14,4 @@
 *.swp
 
 # raw er diagram text for external service
-er_raw.txt
+.er_raw.txt

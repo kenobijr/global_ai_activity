@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total published research articles for certain years
+-- TOP 20 GLOBAL leaders of total published research articles in 2024
 SELECT
 countries.name AS "Country / Block",
 printf('%,d', publications_yearly_articles.amount_articles) AS "Total AI publications"
@@ -6,7 +6,7 @@ FROM countries JOIN publications_yearly_articles
 ON countries.id = publications_yearly_articles.country_id
 JOIN fields ON fields.id = publications_yearly_articles.field_id
 WHERE
-publications_yearly_articles.year = 2023
+publications_yearly_articles.year = 2024
 AND
 fields.name = "All"
 ORDER BY
@@ -14,7 +14,7 @@ publications_yearly_articles.amount_articles DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total estimated AI company fundings for certain years
+-- TOP 20 GLOBAL leaders of total estimated AI company fundings in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_estimated.estimated_investment) AS "Total estimated AI funding in million USD"
@@ -30,7 +30,7 @@ companies_yearly_estimated.estimated_investment DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total disclosed AI company fundings for certain years
+-- TOP 20 GLOBAL leaders of total disclosed AI company fundings in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_disclosed.disclosed_investment) AS "Total disclosed AI funding in million USD"
@@ -38,7 +38,7 @@ FROM countries JOIN companies_yearly_disclosed
 ON countries.id = companies_yearly_disclosed.country_id
 JOIN fields ON fields.id = companies_yearly_disclosed.field_id
 WHERE
-companies_yearly_disclosed.year = 2023
+companies_yearly_disclosed.year = 2024
 AND
 fields.name = "All"
 ORDER BY
@@ -46,9 +46,9 @@ companies_yearly_disclosed.disclosed_investment DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total estimated and disclosed AI company fundings for certain years; sorted by estimated fundings; change year by CTE for whole query
+-- TOP 20 GLOBAL leaders of total estimated and disclosed AI company fundings in 2024; sorted by estimated fundings; change year by CTE for whole query
 WITH chosen_year AS (
-    SELECT 2023 AS y
+    SELECT 2024 AS y
 ),
 est AS (
     SELECT
@@ -85,7 +85,7 @@ ORDER BY
     e.estimated_investment DESC
 LIMIT 20;
 
--- TOP 20 GLOBAL leaders of total patents granted in year
+-- TOP 20 GLOBAL leaders of total patents granted in 2023
 SELECT
 countries.name AS "Country",
 printf('%,d', patents_yearly_granted.amount_grants) AS "Total AI patents granted"
@@ -101,7 +101,7 @@ patents_yearly_granted.amount_grants DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total patents applications in year
+-- TOP 20 GLOBAL leaders of total patents applications in 2023
 SELECT
 countries.name AS "Country",
 printf('%,d', patents_yearly_applications.amount_applications) AS "Total AI patent applications"
@@ -117,7 +117,7 @@ patents_yearly_applications.amount_applications DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total patents applications and granted combined for a year; sorted by "granted"; change year by CTE for whole query
+-- TOP 20 GLOBAL leaders of total patents applications and granted combined in 2023; sorted by "granted"; change year by CTE for whole query
 WITH chosen_year AS (
     SELECT 2023 AS y
 ),
@@ -156,22 +156,9 @@ ORDER BY
     g.amount_grants DESC
 LIMIT 20;
 
-
--- Example query for view publications (all years, all fields)
-SELECT
-   country,
-   amount_publications
-FROM
-    v_publications
-WHERE
-    year = 2024 AND field = 'All'
-ORDER BY
-amount_publications DESC;
-
-
--- TOP 50 GLOBAL LEADERSHIP board with funding, patents and research papers combined; sorted by total funds; change year by CTE for whole query
+-- TOP 50 GLOBAL LEADERSHIP board with funding, patents and research papers combined in 2024; sorted by total funds; change year by CTE for whole query
 WITH chosen_year AS (
-    SELECT 2023 AS y
+    SELECT 2024 AS y
 ),
 est AS (
     SELECT

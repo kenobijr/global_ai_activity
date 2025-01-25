@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total patents applications and granted combined for a year; sorted by "granted"; change year by CTE for whole query
+-- TOP 20 GLOBAL leaders of total patents applications and granted combined in 2023; sorted by "granted"; change year by CTE for whole query
 WITH chosen_year AS (
     SELECT 2023 AS y
 ),

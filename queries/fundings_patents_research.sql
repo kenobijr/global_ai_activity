@@ -1,6 +1,6 @@
--- TOP 50 GLOBAL LEADERSHIP board with funding, patents and research papers combined; sorted by total funds; change year by CTE for whole query
+-- TOP 50 GLOBAL LEADERSHIP board with funding, patents and research papers combined in 2024; sorted by total funds; change year by CTE for whole query
 WITH chosen_year AS (
-    SELECT 2023 AS y
+    SELECT 2024 AS y
 ),
 est AS (
     SELECT

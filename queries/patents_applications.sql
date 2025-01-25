@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total patents applications in year
+-- TOP 20 GLOBAL leaders of total patents applications in 2023
 SELECT
 countries.name AS "Country",
 printf('%,d', patents_yearly_applications.amount_applications) AS "Total AI patent applications"
