@@ -14,7 +14,7 @@ publications_yearly_articles.amount_articles DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total estimated AI company fundings in 2024
+-- TOP 20 GLOBAL leaders of total estimated AI company funding in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_estimated.estimated_investment) AS "Total estimated AI funding in million USD"
@@ -30,7 +30,7 @@ companies_yearly_estimated.estimated_investment DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total disclosed AI company fundings in 2024
+-- TOP 20 GLOBAL leaders of total disclosed AI company funding in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_disclosed.disclosed_investment) AS "Total disclosed AI funding in million USD"
@@ -46,7 +46,7 @@ companies_yearly_disclosed.disclosed_investment DESC
 LIMIT
 20;
 
--- TOP 20 GLOBAL leaders of total estimated and disclosed AI company fundings in 2024; sorted by estimated fundings; change year by CTE for whole query
+-- TOP 20 GLOBAL leaders of total estimated and disclosed AI company funding in 2024; sorted by estimated funding; change year by CTE for whole query
 WITH chosen_year AS (
     SELECT 2024 AS y
 ),

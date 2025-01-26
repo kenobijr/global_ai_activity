@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total disclosed AI company fundings in 2024
+-- TOP 20 GLOBAL leaders of total disclosed AI company funding in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_disclosed.disclosed_investment) AS "Total disclosed AI funding in million USD"

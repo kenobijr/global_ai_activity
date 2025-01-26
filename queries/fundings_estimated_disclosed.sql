@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total estimated and disclosed AI company fundings in 2024; sorted by estimated fundings; change year by CTE for whole query
+-- TOP 20 GLOBAL leaders of total estimated and disclosed AI company funding in 2024; sorted by estimated funding; change year by CTE for whole query
 WITH chosen_year AS (
     SELECT 2024 AS y
 ),

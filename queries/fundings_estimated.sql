@@ -1,4 +1,4 @@
--- TOP 20 GLOBAL leaders of total estimated AI company fundings in 2024
+-- TOP 20 GLOBAL leaders of total estimated AI company funding in 2024
 SELECT
 countries.name AS "Country",
 printf('%,d', companies_yearly_estimated.estimated_investment) AS "Total estimated AI funding in million USD"
